@@ -1,0 +1,360 @@
+/* general  *********************************/
+body{
+	color:#434343;
+}
+.bottom-distance{
+	margin-bottom:1em;
+}
+.small-font{
+	font-size:11px;
+}
+ul.has-bullet{
+	list-style: square;
+	margin-left:20px;
+}
+h2{
+	font-size:18px;
+}
+h3{
+	font-size:16px;
+}
+h4{
+	font-size:14px;
+}
+h2,h3,h4{
+	text-overflow:ellipsis; 
+	overflow:hidden; 
+	white-space:nowrap;
+}
+a,
+a:hover{
+	text-decoration:none;
+	color:#434343;
+}
+@mixin c-p($value:1em 1em){
+	padding:$value;
+}
+/* first of all  *********************************/
+.shout-out{
+	border-radius: 3px;
+	@include c-p(5px 10px);
+	font-weight: bold;
+	display:inline-block;
+	color:#fff;
+}
+.scroll-content{
+	top:44px;
+}
+.bold{
+	font-weight:bold;
+}
+.align-right{
+	text-align:right;
+}
+.no-bottom-margin,
+.button.no-bottom-margin{
+	margin-bottom:0;
+}
+.loading-container .loading{
+	background-color:transparent;
+	font-size:5em;
+}
+
+input::-moz-placeholder, textarea::-moz-placeholder {
+  color: #999; 
+}
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+  color: #999; 
+}
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+  color: #999;
+}
+input[disabled]{
+	background-color:transparent;
+}
+
+/*.site-loader{
+	width:100%;
+	height:100%;
+	position:fixed;
+	top:0;
+	left:0;
+	background-image:url(../img/apple-touch-startup-image-640x1096.png);
+	background-repeat:no-repeat;
+	background-size: 100% 100%;
+}*/
+.background-gray{
+	background-color:#F8F8F8;
+}
+a.light:hover{
+	color:#fff;
+}
+// include retina background sass minxin  
+// retina.sass
+// A helper mixin for applying high-resolution background images (http://www.retinajs.com)
+
+// Submitted by Nathan Crank
+// nathancrank.com
+// Syntax: .at2x(@path, [optional] @width: auto, [optional] @height: auto);
+
+//@mixin at2x($path, $ext: "jpg", $w: auto, $h: auto) {
+//  $at1x_path: "#{$path}.#{$ext}";
+//  $at2x_path: "#{$path}@2x.#{$ext}";
+
+//  background-image: url("#{$at1x_path}");
+
+//  @media all and (-webkit-min-device-pixel-ratio : 1.5),
+//         all and (-o-min-device-pixel-ratio: 3/2),
+//         all and (min--moz-device-pixel-ratio: 1.5),
+ //        all and (min-device-pixel-ratio: 1.5) {
+ //          background-image: url("#{$at2x_path}");
+ //          background-size: $w $h;
+ // }
+//}
+
+
+/* homepage  *********************************/
+.home-slider{
+	height:140px;
+	@extend .bottom-distance;
+	.slider-pager{
+		bottom:10px;
+		.slider-pager-page{
+			color: #fff;
+			font-size: 60%;
+		}
+	}
+	h2,h3,h4{
+		line-height: 100%;
+		margin-top:0;
+		
+	}
+	.slider-slide{
+		.ca,.uk,.us,.au{
+			padding-top:10px;
+			height:100%;
+			background-size:100% 100%;
+			background-repeat:no-repeat;
+			background-position:center center;
+		}
+		.us{
+			background-image:url('../img/flag-us@2x.png');
+		}
+		.ca{
+			background-image:url('../img/flag-ca@2x.png');
+		}
+		.uk{
+			background-image:url('../img/flag-uk@2x.png');
+		}
+		.au{
+			background-image:url('../img/flag-au@2x.png');
+		}
+	}
+	.school-profile-header-name-info{
+		overflow:hidden;
+		
+	}
+	.school-profile-header-logo{
+		float:left;
+		padding:10px 10px 0;
+		position: relative;
+		top:-10px;
+		margin:0 20px;
+		background-color:#fff;
+		img{
+			border:1px solid #ccc;
+			position: relative;
+			z-index: 1;
+		}
+	}
+	.school-profile-header-logo:after,
+	.school-profile-header-logo:before{
+		content: '';
+		position: absolute;
+		border-bottom: 80px solid #fff;
+		border-left: 40px solid transparent;
+		border-right: 40px solid transparent;
+		top: 55px;
+		left: -22px;
+		-webkit-transform: rotate(-152deg);
+		transform: rotate(-152deg);	
+	}
+	.school-profile-header-logo:after{
+	  left:auto;
+	  right:-22px;
+	  -webkit-transform: rotate(152deg);
+	  transform: rotate(152deg);	
+	}
+}
+.homepage-box{
+	@extend .bottom-distance;
+	h2{
+		text-indent: 1em;
+		border-bottom: 1px solid #e6e6e6;
+		padding-bottom:.5em;
+		margin-bottom: 0;
+	}
+	.row{
+		padding-top:0;
+	}
+	.col{
+		border-bottom: 1px solid #e6e6e6;
+		border-right: 1px solid #e6e6e6;
+		height:120px;
+		text-align:center;
+		>div,
+		>a>div{
+			display: table;
+			width: 100%;
+			height: 110px;
+		}
+		span{
+			margin:auto;
+			display: table-cell;
+			vertical-align: middle;
+			em{
+				font-weight:bold;
+				display: block;
+			}
+		}
+	}
+	.col:nth-last-of-type(1){
+		border-right:0;
+	}
+	.col.s-highschool{
+		position:relative;
+		overflow: hidden;
+		.tip-new{
+			position : absolute;
+			right:-27px;
+			top:-18px;
+			padding: 25px 5px 5px;
+			width:70px;
+			height: 15px;
+			-webkit-transform: rotate(45deg);
+			transform: rotate(45deg);
+		}
+	}
+}
+
+/* school list ********************************************/
+.school-list-title{
+	text-align:center;
+}
+.school-list-range{
+	font-weight: bold;
+	text-align:center;
+	background-color:#fff;
+	margin-bottom:0;
+	*{
+		display: inline-block;
+		padding:.2em 0.4em;
+	}
+	dd{
+		cursor: pointer;
+	}
+}
+.school-list{
+	.item{
+		@extend .background-gray;
+		padding: 10px 0;
+		>div:nth-of-type(1){
+			font-size: 1.4em;
+			font-weight:bold;
+		}
+		>div:nth-of-type(1),
+		>div:nth-of-type(2){
+			text-align: center;
+		}
+		>div:nth-of-type(2){
+			img{
+				width:40px;
+				height:40px;
+			}
+		}
+		.school-list-item-shout-out{
+			text-align: right;
+		}
+	}
+}
+
+/* school profile **********************************************/
+.profile-header-ca,.profile-header-uk,.profile-header-us,.profile-header-au{
+	padding-top:10px;
+	height:100%;
+	background-size:100% 100%;
+	background-repeat:no-repeat;
+	background-position:center center;
+	padding-bottom:25px;
+	h2,h3,h4{
+		line-height: 100%;
+		margin-top:0;
+		
+	}
+	.logo-wrapper{
+		float:left;
+		padding:10px 10px 0;
+		position: relative;
+		top:-10px;
+		margin:0 20px;
+		background-color:#fff;
+		img{
+			border:1px solid #ccc;
+			position: relative;
+			z-index: 1;
+		}
+	}
+	.logo-wrapper:after,
+	.logo-wrapper:before{
+		content: '';
+		position: absolute;
+		border-bottom: 80px solid #fff;
+		border-left: 40px solid transparent;
+		border-right: 40px solid transparent;
+		top: 55px;
+		left: -22px;
+		-webkit-transform: rotate(-152deg);
+		transform: rotate(-152deg);	
+	}
+	.logo-wrapper:after{
+	  left:auto;
+	  right:-22px;
+	  -webkit-transform: rotate(152deg);
+	  transform: rotate(152deg);	
+	}
+}
+.profile-header-us{
+	background-image:url('../img/flag-us@2x.png');
+}
+.profile-header-ca{
+	background-image:url('../img/flag-ca@2x.png');
+}
+.profile-header-uk{
+	background-image:url('../img/flag-uk@2x.png');
+}
+.profile-header-au{
+	background-image:url('../img/flag-au@2x.png');
+}
+/* profile tabs */
+.profile-tabs{
+	padding:0;
+	.col{
+		padding:0;
+		border-right:1px solid #ccc;
+		button{
+			margin:0;
+			font-weight:bold;
+			font-size: 1.1em;
+		}
+	}
+}
+.profile-list {
+	.row{
+		border-bottom: 1px solid #eee;
+		margin-top:0;
+		padding-top:5px;
+		h4{
+			margin:5px 0;
+		}
+	}
+}

@@ -1,0 +1,52 @@
+<div class="bar bar-header bar-positive">
+  <a class="button button-icon icon ion-ios7-arrow-left" ng-click = "historyBack()">返回</a>
+  <h1 class="title">院校排行</h1>
+  <a class="button button-icon icon ion-person" ng-click = "checkUserStatus()"></a>
+</div>
+<ion-content class="background-gray">
+	<section class="school-list-title">
+		<h2>{{titleh2}}</h2>
+		<h3>{{titleh3}}</h3>
+	</section>
+	<dl ng-init="limit = '0,50'" class="school-list-range dark" >
+		<dt>排名范围</dt>
+		<dd ng-class="{true: 'energized', false: 'inactive'}[isActive1]" ng-click = "refresh('0,50')">0-50</dd>
+		<dd ng-class="{true: 'energized', false: 'inactive'}[isActive2]" ng-click = "refresh('50,50')">50-100</dd>
+		<dd ng-class="{true: 'energized', false: 'inactive'}[isActive3]" ng-click = "refresh('100,50')">100-150</dd>
+		<dd ng-class="{true: 'energized', false: 'inactive'}[isActive4]" ng-click = "refresh('150,50')">150以后</dd>
+	</dl>
+	<div on-swipe-left="refreshLeft();" on-swipe-right="refreshRight();">
+		<ul class="list school-list" ng-if="schools">
+			<li ng-repeat = "school in schools" class="item row" >
+				<div class="school-list-item-rank col-10 col-center energized">{{school.rank}}</div>
+				<div class="school-list-item-logo-wrapper col-20 col-center">
+					<a href="#/school/{{school.nid}}">
+						<img ng-src="{{school.logo}}" class="rank-img">
+					</a>
+				</div>
+				<div class="school-list-item-summary col-66">
+					<h2>{{school.name_cn}}</h2>
+					<h3>{{school.name_en}}</h3>
+					<div class="row">
+						<div class="col-50">
+							<p>
+								TOEFL要求: <strong ng-bind="school.toefl_require" class="positive"></strong><br>
+								录取率: <strong ng-bind="school.school_acceptance_rate" class="positive"></strong>%
+							</p>
+						</div>
+						<div class="school-list-item-shout-out col-50 col-bottom">
+							<a href="#/ichance/info/{{school.nid}}" class="rank-shout-out"><button class="button button-small button-calm">测试录取几率</button></a>
+						</div>
+					</div>
+					
+				</div>
+				
+			</li>
+		</ul>
+	</div>
+	<div ng-show="shownodata" class="card">
+		<div class="item item-text-wrap">
+		    {{nodata}}
+		</div>
+	</div>
+</ion-content>

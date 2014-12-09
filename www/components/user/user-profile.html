@@ -1,0 +1,36 @@
+<div class="bar bar-header bar-positive">
+  <a class="button button-icon icon ion-ios7-arrow-left" ng-click = "historyBack()">返回</a>
+  <h1 class="title">用户信息</h1>
+  <a class="button button-icon icon ion-ios7-compose" href='#/user-profile/edit'></a>
+</div>
+<ion-content>
+	<div class="list list-inset">
+		<div class="item item-divider">基本资料</div>
+		<div class="item">账号<span class="item-note">{{user.name}}</span></div>
+		<div class="item">密码<span class="item-note"><a href="#/password/edit" class="calm">修改密码</a></span></div>
+		<div class="item">年级<span class="item-note">{{user.currentStatus}}</span></div>
+		<div class="item">姓名<span class="item-note">
+			<span ng-show = "!!user.lastName || !!user.lastName">{{user.lastName}} {{user.firstName}}</span>
+	    	<span ng-hide = "!!user.lastName || !!user.lastName">尚未填写</span>
+		</span></div>
+		<div class="item">地址<span class="item-note">
+			<span ng-repeat="province in Location.provinceMapping | filter: {key: user.province}">{{province.label}}</span>
+        	 - <span ng-repeat="city in Location.cityMapping[user.province] | filter: {key: user.city}">{{city.label}}</span>
+		</span></div>
+	</div>
+	<div class="list list-inset">
+		<div class="item item-divider">考试成绩</div>
+		<div class="item">年级排名<span class="item-note">
+			<span ng-repeat="rank in ClassRank.mapping | filter: {key: user.classRank}">{{rank.label}}</span>
+		</span></div>
+		<div class="item">托福<span class="item-note">{{user.education.toefl}}</span></div>
+		<div class="item">雅思<span class="item-note">{{user.education.ielts}}</span></div>
+		<div class="item">SAT<span class="item-note">{{user.education.sat}}</span></div>
+		<div class="item">ACT<span class="item-note">{{user.education.act}}</span></div>
+	</div>
+	<div class="padding">
+		<button class="button button-block button-energized" ng-click="logout();">
+		  退出当前账号
+		</button>
+	</div>
+</ion-content>

@@ -1,0 +1,74 @@
+<div class="bar bar-header bar-positive">
+  <a class="button button-icon icon ion-ios7-arrow-left" ng-click = "historyBack()">返回</a>
+  <h1 class="title">编辑个人信息</h1>
+  <a class="button button-clear" ng-click="submit()">保存</a>
+</div>
+<ion-content>
+	<div class="list list-inset">
+		<div class="item item-divider">基本资料</div>
+		<label class="item item-input">
+			<span class="input-label">账号</span>
+			<input type="text" placeholder = '{{user.name}}' disabled="disabled" >
+		</label>
+		<label class="item item-input">
+			<span class="input-label">手机</span>
+			<input type="tel" placeholder = '请输入手机号码' ng-model = 'user.phone' >
+		</label>
+		<label class="item item-input item-select">
+			<span class="input-label">年级</span>
+			<select name="class_rank" ng-model="user.currentStatus">
+	          <option value="">请选择当前年级</option>
+	          <option ng-repeat="status in statusMapping" value="{{status.key}}">{{status.label}}</option>
+	        </select>
+		</label>
+		<label class="item item-input">
+			<span class="input-label">姓</span>
+			<input type="text" placeholder = "输入名的拼音" ng-model="user.lastName">
+		</label>
+		<label class="item item-input">
+			<span class="input-label">名</span>
+			<input type="text" placeholder = "输入名的拼音" ng-model="user.firstName">
+		</label>
+		<label class="item item-input item-select">
+			<span class="input-label">省份/直辖市</span>
+			<select name="class_rank" ng-model="user.province">
+	          <option value="">请选择所在省份或直辖市</option>
+	          <option ng-repeat="province in provinceMapping" value="{{province.key}}" ng-selected="user.province == province.key">{{province.label}}</option>
+	        </select>
+		</label>
+		<label class="item item-input item-select">
+			<span class="input-label">城市/行政区</span>
+			<select name="class_rank" ng-model="user.city">
+	          <option value="">请选择所在城市或行政区</option>
+	          <option ng-repeat="city in cityMapping" value="{{city.key}}" ng-selected="user.city == city.key">{{city.label}}</option>
+	        </select>
+		</label>
+	</div>
+
+	<div class="list list-inset">
+		<div class="item item-divider">考试成绩</div>
+		<label class="item item-input item-select">
+			<span class="input-label">年级排名</span>
+            <select name="class_rank" ng-model="user.classRank">
+	          <option value="">请选择年级排名</option>
+	          <option ng-repeat="rank in rankMapping" value="{{rank.key}}">{{rank.label}}</option>
+	        </select>
+		</label>
+		<label class="item item-input">
+			<span class="input-label">托福</span>
+			<input type="tel" placeholder = "输入托福成绩" ng-model="user.education.toefl">
+		</label>
+		<label class="item item-input">
+			<span class="input-label">雅思</span>
+			<input type="text" placeholder = "输入雅思成绩" ng-model="user.education.ielts">
+		</label>
+		<label class="item item-input">
+			<span class="input-label">SAT</span>
+			<input type="tel" placeholder = "输入SAT成绩" ng-model="user.education.sat">
+		</label>
+		<label class="item item-input">
+			<span class="input-label">ACT</span>
+			<input type="tel" placeholder = "输入ACT成绩" ng-model="user.education.act">
+		</label>
+	</div>
+</ion-content>

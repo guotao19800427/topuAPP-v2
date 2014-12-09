@@ -1,0 +1,280 @@
+/* general  *********************************/
+body {
+  color: #434343; }
+
+.bottom-distance, .home-slider, .homepage-box {
+  margin-bottom: 1em; }
+
+.small-font {
+  font-size: 11px; }
+
+ul.has-bullet {
+  list-style: square;
+  margin-left: 20px; }
+
+h2 {
+  font-size: 18px; }
+
+h3 {
+  font-size: 16px; }
+
+h4 {
+  font-size: 14px; }
+
+h2, h3, h4 {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap; }
+
+a,
+a:hover {
+  text-decoration: none;
+  color: #434343; }
+
+/* first of all  *********************************/
+.shout-out {
+  border-radius: 3px;
+  padding: 5px 10px;
+  font-weight: bold;
+  display: inline-block;
+  color: #fff; }
+
+.scroll-content {
+  top: 44px; }
+
+.bold {
+  font-weight: bold; }
+
+.align-right {
+  text-align: right; }
+
+.no-bottom-margin,
+.button.no-bottom-margin {
+  margin-bottom: 0; }
+
+.loading-container .loading {
+  background-color: transparent;
+  font-size: 5em; }
+
+input::-moz-placeholder, textarea::-moz-placeholder {
+  color: #999; }
+
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+  color: #999; }
+
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+  color: #999; }
+
+input[disabled] {
+  background-color: transparent; }
+
+/*.site-loader{
+	width:100%;
+	height:100%;
+	position:fixed;
+	top:0;
+	left:0;
+	background-image:url(../img/apple-touch-startup-image-640x1096.png);
+	background-repeat:no-repeat;
+	background-size: 100% 100%;
+}*/
+.background-gray, .school-list .item {
+  background-color: #F8F8F8; }
+
+a.light:hover {
+  color: #fff; }
+
+/* homepage  *********************************/
+.home-slider {
+  height: 140px; }
+  .home-slider .slider-pager {
+    bottom: 10px; }
+    .home-slider .slider-pager .slider-pager-page {
+      color: #fff;
+      font-size: 60%; }
+  .home-slider h2, .home-slider h3, .home-slider h4 {
+    line-height: 100%;
+    margin-top: 0; }
+  .home-slider .slider-slide .ca, .home-slider .slider-slide .uk, .home-slider .slider-slide .us, .home-slider .slider-slide .au {
+    padding-top: 10px;
+    height: 100%;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center center; }
+  .home-slider .slider-slide .us {
+    background-image: url("../img/flag-us@2x.png"); }
+  .home-slider .slider-slide .ca {
+    background-image: url("../img/flag-ca@2x.png"); }
+  .home-slider .slider-slide .uk {
+    background-image: url("../img/flag-uk@2x.png"); }
+  .home-slider .slider-slide .au {
+    background-image: url("../img/flag-au@2x.png"); }
+  .home-slider .school-profile-header-name-info {
+    overflow: hidden; }
+  .home-slider .school-profile-header-logo {
+    float: left;
+    padding: 10px 10px 0;
+    position: relative;
+    top: -10px;
+    margin: 0 20px;
+    background-color: #fff; }
+    .home-slider .school-profile-header-logo img {
+      border: 1px solid #ccc;
+      position: relative;
+      z-index: 1; }
+  .home-slider .school-profile-header-logo:after,
+  .home-slider .school-profile-header-logo:before {
+    content: '';
+    position: absolute;
+    border-bottom: 80px solid #fff;
+    border-left: 40px solid transparent;
+    border-right: 40px solid transparent;
+    top: 55px;
+    left: -22px;
+    -webkit-transform: rotate(-152deg);
+    transform: rotate(-152deg); }
+  .home-slider .school-profile-header-logo:after {
+    left: auto;
+    right: -22px;
+    -webkit-transform: rotate(152deg);
+    transform: rotate(152deg); }
+
+.homepage-box h2 {
+  text-indent: 1em;
+  border-bottom: 1px solid #e6e6e6;
+  padding-bottom: .5em;
+  margin-bottom: 0; }
+.homepage-box .row {
+  padding-top: 0; }
+.homepage-box .col {
+  border-bottom: 1px solid #e6e6e6;
+  border-right: 1px solid #e6e6e6;
+  height: 120px;
+  text-align: center; }
+  .homepage-box .col > div,
+  .homepage-box .col > a > div {
+    display: table;
+    width: 100%;
+    height: 110px; }
+  .homepage-box .col span {
+    margin: auto;
+    display: table-cell;
+    vertical-align: middle; }
+    .homepage-box .col span em {
+      font-weight: bold;
+      display: block; }
+.homepage-box .col:nth-last-of-type(1) {
+  border-right: 0; }
+.homepage-box .col.s-highschool {
+  position: relative;
+  overflow: hidden; }
+  .homepage-box .col.s-highschool .tip-new {
+    position: absolute;
+    right: -27px;
+    top: -18px;
+    padding: 25px 5px 5px;
+    width: 70px;
+    height: 15px;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg); }
+
+/* school list ********************************************/
+.school-list-title {
+  text-align: center; }
+
+.school-list-range {
+  font-weight: bold;
+  text-align: center;
+  background-color: #fff;
+  margin-bottom: 0; }
+  .school-list-range * {
+    display: inline-block;
+    padding: .2em 0.4em; }
+  .school-list-range dd {
+    cursor: pointer; }
+
+.school-list .item {
+  padding: 10px 0; }
+  .school-list .item > div:nth-of-type(1) {
+    font-size: 1.4em;
+    font-weight: bold; }
+  .school-list .item > div:nth-of-type(1),
+  .school-list .item > div:nth-of-type(2) {
+    text-align: center; }
+  .school-list .item > div:nth-of-type(2) img {
+    width: 40px;
+    height: 40px; }
+  .school-list .item .school-list-item-shout-out {
+    text-align: right; }
+
+/* school profile **********************************************/
+.profile-header-ca, .profile-header-uk, .profile-header-us, .profile-header-au {
+  padding-top: 10px;
+  height: 100%;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  padding-bottom: 25px; }
+  .profile-header-ca h2, .profile-header-ca h3, .profile-header-ca h4, .profile-header-uk h2, .profile-header-uk h3, .profile-header-uk h4, .profile-header-us h2, .profile-header-us h3, .profile-header-us h4, .profile-header-au h2, .profile-header-au h3, .profile-header-au h4 {
+    line-height: 100%;
+    margin-top: 0; }
+  .profile-header-ca .logo-wrapper, .profile-header-uk .logo-wrapper, .profile-header-us .logo-wrapper, .profile-header-au .logo-wrapper {
+    float: left;
+    padding: 10px 10px 0;
+    position: relative;
+    top: -10px;
+    margin: 0 20px;
+    background-color: #fff; }
+    .profile-header-ca .logo-wrapper img, .profile-header-uk .logo-wrapper img, .profile-header-us .logo-wrapper img, .profile-header-au .logo-wrapper img {
+      border: 1px solid #ccc;
+      position: relative;
+      z-index: 1; }
+  .profile-header-ca .logo-wrapper:after,
+  .profile-header-ca .logo-wrapper:before, .profile-header-uk .logo-wrapper:after,
+  .profile-header-uk .logo-wrapper:before, .profile-header-us .logo-wrapper:after,
+  .profile-header-us .logo-wrapper:before, .profile-header-au .logo-wrapper:after,
+  .profile-header-au .logo-wrapper:before {
+    content: '';
+    position: absolute;
+    border-bottom: 80px solid #fff;
+    border-left: 40px solid transparent;
+    border-right: 40px solid transparent;
+    top: 55px;
+    left: -22px;
+    -webkit-transform: rotate(-152deg);
+    transform: rotate(-152deg); }
+  .profile-header-ca .logo-wrapper:after, .profile-header-uk .logo-wrapper:after, .profile-header-us .logo-wrapper:after, .profile-header-au .logo-wrapper:after {
+    left: auto;
+    right: -22px;
+    -webkit-transform: rotate(152deg);
+    transform: rotate(152deg); }
+
+.profile-header-us {
+  background-image: url("../img/flag-us@2x.png"); }
+
+.profile-header-ca {
+  background-image: url("../img/flag-ca@2x.png"); }
+
+.profile-header-uk {
+  background-image: url("../img/flag-uk@2x.png"); }
+
+.profile-header-au {
+  background-image: url("../img/flag-au@2x.png"); }
+
+/* profile tabs */
+.profile-tabs {
+  padding: 0; }
+  .profile-tabs .col {
+    padding: 0;
+    border-right: 1px solid #ccc; }
+    .profile-tabs .col button {
+      margin: 0;
+      font-weight: bold;
+      font-size: 1.1em; }
+
+.profile-list .row {
+  border-bottom: 1px solid #eee;
+  margin-top: 0;
+  padding-top: 5px; }
+  .profile-list .row h4 {
+    margin: 5px 0; }

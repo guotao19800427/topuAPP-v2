@@ -1,0 +1,93 @@
+
+<div class="bar bar-header bar-positive">
+  
+  <h1 class="title">世界大学排行榜</h1>
+  <a class="button button-icon icon ion-person" ng-click = "checkUserStatus()"></a>
+</div>
+<ion-content>
+	<!--slide-->
+	<ion-slide-box class="home-slider" auto-play="true"  does-continue="true" slide-interval = "4000" ng-show = "showSlider" >
+	    <ion-slide ng-repeat="school in sliderSchool">
+	    	<div class= '{{school.country}}'>
+		      <div class="school-profile-header-logo">
+		        <a href="#/school/{{school.nid}}" ng-bind-html="school.school_logo"></a>
+		      </div>
+		      <div class="school-profile-header-name-info">
+		        <h2><a href="#/school/{{school.nid}}" class="light">{{school.school_name_cn}}</a></h2>
+		        <h3 class="light">{{school.school_name_en}}</h3>
+		        <h4 class="energized" ng-bind-html = 'school.school_rank'></h4>
+		        <a href="#/ichance/info/{{school.nid}}"  class="shout-out energized-bg light">测试你的录取几率</a>
+		      </div>
+		    </div>
+	    </ion-slide>
+	</ion-slide-box>
+
+	<!-- US schools -->
+	<section class="homepage-box">
+		<h2>美国院校</h2>
+		<div class="row">
+		  <div class="col s-highschool">
+		  	<div class="tip-new energized-bg light">new</div>
+		  	<div><span><img ng-src="img/home-rank.png" width="30" height="30"><br/>高中院校</span></div>
+		  </div>
+		  <div class="col">
+		  	<a href="#/rank/us/nationaluniversity">
+		  		<div><span><img ng-src="img/home-rank-01.png" width="30" height="30" ><br/>本科综合排名</span></div>
+		  	</a>
+		  </div>
+		  <div class="col">
+		  	<a href="#/rank/us/lac">
+		  		<div><span><img ng-src="img/home-rank-02.png" width="30" height="30"><br/>文理学院</span></div>
+		  	</a>
+		  </div>
+		</div>
+		<div class="row">
+		  <div class="col">
+			<a href="#/rank/us/business">
+		  		<div><span><img ng-src="img/home-rank-03.png" width="30" height="30"><br/>本科商务专业</span></div>
+		  	</a>
+		  </div>
+		  <div class="col">
+		  	<a href="#/rank/us/engineering">
+		  		<div><span><img ng-src="img/home-rank-04.png" width="30" height="30"><br/>本科工程专业</span></div>
+		  	</a>
+		  </div>
+		  <div class="col">
+			<a href="#/rank/world/qs-world-university-rankings">
+		  		<div><span><img ng-src="img/home-rank-10.png" width="30" height="30"><br/>世界大学排名</span></div>
+		  	</a>
+		  </div>
+		</div>
+	</section>
+	<!-- other schools -->
+	<section class="homepage-box">
+		<h2>其他国家院校</h2>
+		<div class="row">
+		  <div class="col">
+		  	<a href="#/rank/canada/medical_doctoral">
+		  		<div><span><img ng-src="img/home-rank-05.png" width="30" height="30"><br/><em>加拿大</em>顶尖研究院</span></div>
+		  	</a>
+		  </div>
+		  <div class="col">
+		  	<a href="#/rank/uk/guardian">
+		  		<div><span><img ng-src="img/home-rank-06.png" width="30" height="30"><br/><em>英国</em>卫报排名</span></div>
+		  	</a>
+		  </div>
+		  <div class="col">
+		  	<a href="#/rank/canada/Comprehensive">
+		  		<div><span><img ng-src="img/home-rank-07.png" width="30" height="30"><br/><em>加拿大</em>综合大学</span></div>
+		  	</a>
+		  </div>
+		</div>
+		<div class="row">
+		  <div class="col">
+		  	<a href="#/rank/canada/primarily_undergraduate">
+		  		<div><span><img ng-src="img/home-rank-08.png" width="30" height="30"><br/><em>加拿大</em>普通本科院校</span></div>
+		  	</a>
+		  	</div>
+		  <div class="col"><div><span><img ng-src="img/home-rank-09.png" width="30" height="30"><br/><em>澳洲</em>大学星级排名</span></div></div>
+		  <div class="col"><div></div></div>
+		</div>
+	</section>
+	
+</ion-content>

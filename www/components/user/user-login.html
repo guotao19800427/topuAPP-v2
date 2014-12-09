@@ -1,0 +1,25 @@
+<div class="bar bar-header bar-positive">
+  <a class="button button-icon icon ion-ios7-arrow-left" ng-click = "historyBack()">返回</a>
+  <h1 class="title">用户登录</h1>
+</div>
+<ion-content>
+	<div class="list list-inset">
+	  <label class="item item-input">
+	  	<i class="icon ion-person placeholder-icon positive"></i>
+	    <input type="email" placeholder="注册邮箱" ng-model="email">
+	  </label>
+	  <label class="item item-input">
+	  	<i class="icon  ion-ios7-locked placeholder-icon positive"></i>
+	    <input type="password" placeholder="密码" ng-model = "password">
+	  </label>
+	</div>
+	<div class="padding">
+		<button class="button button-block button-energized no-bottom-margin" ng-click="submit()">
+		  登录
+		</button>
+	</div>
+	<div class="row">
+		<div class="col"><a href="#/user-regisiter">免费注册</a></div>
+		<div class="col align-right"><a href="#/user-forgot-password">找回密码</a></div>
+	</div>
+</ion-content>

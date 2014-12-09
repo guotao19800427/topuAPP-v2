@@ -1,0 +1,67 @@
+<div class="bar bar-header bar-positive">
+  <a class="button button-icon icon ion-ios7-arrow-left" ng-click = "historyBack()">返回</a>
+  <h1 class="title">用户注册</h1>
+</div>
+<ion-content>
+	<div class="list list-inset">
+		<label class="item item-input">
+			<i class="icon ion-person placeholder-icon"></i>
+			<input ng-model="newUser.email" type="email"  placeholder="电子邮件(用于登录账户)" />
+		</label>
+		<label class="item item-input">
+			<i class="icon ion-ios7-locked placeholder-icon"></i>
+			<input ng-model="newUser.password" type="password"  placeholder="密码不能少于6位" />
+		</label>
+		<label class="item item-input">
+			<i class="icon ion-iphone placeholder-icon"></i>
+			<input ng-model="newUser.phone" type="tel"  placeholder="请输入手机号" />
+		</label>
+		<label class="item item-input item-select">
+			<span class="input-label">&nbsp;</span>
+			<select ng-model="newUser.grade">
+		      <option value="">请选择当前年级</option>
+		      <option value="初一">初一</option>
+		      <option value="初二">初二</option>
+		      <option value="初三">初三</option>
+		      <option value="高一">高一</option>
+		      <option value="高二">高二</option>
+		      <option value="高三">高三</option>
+		      <option value="大一">大一</option>
+		      <option value="大二">大二</option>
+		      <option value="大三">大三</option>
+		      <option value="大四">大四</option>
+		      <option value="本科以上">本科以上</option>
+		    </select>
+		</label>
+		<label class="item item-input">
+			<i class="icon ion-edit placeholder-icon"></i>
+			<input ng-model="newUser.lastname" type="text"  placeholder="姓(拼音)" />
+		</label>
+		<label class="item item-input">
+			<i class="icon ion-edit placeholder-icon"></i>
+			<input ng-model="newUser.firstname" type="text"  placeholder="名(拼音)" />
+		</label>
+		<label class="item item-input item-select">
+			<span class="input-label">&nbsp;</span>
+			<select ng-model="newUser.province">
+		      <option value="">请选择省份或直辖市</option>
+		      <option ng-repeat="province in provinceMapping" value="{{province.key}}">{{province.label}}</option>
+		    </select>
+		</label>
+		<label class="item item-input item-select">
+			<span class="input-label">&nbsp;</span>
+			<select ng-model="newUser.city">
+		      <option value="">请选择城市或行政区</option>
+		      <option ng-repeat="city in cityMapping" value="{{city.key}}">{{city.label}}</option>
+		    </select>
+		</label>
+	</div>
+	<div class="padding calm" ng-click = 'openModal();'>
+		<i class="icon ion-checkmark-circled positive"></i> 我已阅读并同意Zinch中国服务条款
+	</div>
+	<div class="padding">
+		<button class="button button-block button-energized no-bottom-margin" ng-click="submit();">
+		  完成
+		</button>
+	</div>
+</ion-content>

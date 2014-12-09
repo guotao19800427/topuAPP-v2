@@ -1,0 +1,68 @@
+<div class="bar bar-header bar-positive">
+  <a class="button button-icon icon ion-ios7-arrow-left" ng-click = "historyBack()">返回</a>
+  <h1 class="title">院校详细资料</h1>
+  <a class="button button-icon icon ion-person" ng-click = "checkUserStatus()"></a>
+</div>
+<ion-content>
+	<div class="profile-header-{{school.school_country}}">
+		<div class="logo-wrapper"><img ng-src="{{school.school_logo_75x75_url}}"></div>
+		<h2 class="school-name-cn light" ng-bind="school.school_name_cn"></h2>
+		<h3 class="school-name-en light" ng-bind="school.school_name_en"></h3>
+		<h4 class="light bold"><span class="energized">{{school.like_count}}</span>人考虑申请</h4>
+		<a href="#/ichance/info/{{school.nid}}" class="shout-out energized-bg light">测试你的录取几率</a>
+	</div>
+	<!--'tabs'-->
+	<div class="row profile-tabs">
+		<div class="col" ng-click = 'switchToOverview()'>
+			<button class="button button-full button-light button-small" ng-class={'button-positive':showOverview}>
+				概况
+			</button>
+		</div>
+		<div class="col" ng-click = 'switchToRequirements()'>
+			<button class="button button-full button-light button-small" ng-class = {'button-positive':showRequirements}>
+				录取要求
+			</button>
+		</div>
+		<div class="col" ng-click = 'switchToMajor()'>
+			<button class="button button-full button-light button-small" ng-class = {'button-positive':showMajor}>
+				专业
+			</button>
+		</div>
+	</div>
+	<!-- 'tabs content' -->
+	<div class="profile-list overview-list" ng-show = 'showOverview'>
+		<div class="row">
+			<div class="col-10 col-offset-10 col-top"><i class="icon ion-stats-bars dark"></i></div>
+			<div class="col-70">content</div>
+		</div>
+		<div class="row">
+			<div class="col-10 col-offset-10 col-top dark">$</div>
+			<div class="col-70">content</div>
+		</div>
+		<div class="row">
+			<div class="col-10 col-offset-10 col-top dark"><i class="icon ion-wrench"></i></div>
+			<div class="col-70">
+				content<br/>
+				content<br/>
+				content<br/>
+				content
+			</div>
+		</div>
+		<div class="row stable-bg">
+			
+			<div class="col-80 col-offset-10">
+				<h4 class="dark">特色介绍</h4>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-10 col-offset-10 col-top">icon</div>
+			<div class="col-70">content</div>
+		</div>
+	</div>
+	<div class="profile-list requirements-list" ng-show = 'showRequirements'>
+		This is requirements list
+	</div>
+	<div class="profile-list major-list" ng-show = 'showMajor'>
+		This is major list
+	</div>
+</ion-content>

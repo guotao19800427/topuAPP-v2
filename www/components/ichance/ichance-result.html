@@ -1,0 +1,25 @@
+<div class="bar bar-header bar-positive">
+  <a class="button button-icon icon ion-ios7-arrow-left" ng-click = "historyBack()">返回</a>
+  <h1 class="title">测试结果</h1>
+  <a class="button button-icon icon ion-person" ng-click = "checkUserStatus()"></a>
+</div>
+<ion-content>
+	<div class="padding row stable-bg">
+		<div class="col-33"><img ng-src="{{school.school_logo_75x75_url}}"></div>
+		<div class="col-67">
+			<h2>{{school.school_name_cn}}</h2>
+		    <h5>{{school.school_name_en}}</h5>
+		    <p>已有<strong class="positive">{{school.like_count}}</strong>位Zinch用户考虑申请该校</p>
+		</div>
+	</div>
+	<div class="padding stable-bg ">
+		<button class="button button-small button-block  button-energized"><span class="small-font">该学校对你来说是一所</span> <strong>{{results.matchType}}</strong></button>
+		<ul class="has-bullet energized">
+			<li>你的SAT成绩已经超该校{{results.score}}%的学生</li>
+			<li ng-show="results.feedback">{{results.feedback}}</li>
+			<li ng-show="results.feedback2">{{results.feedback2}}</li>
+			<li ng-show="results.feedback3">{{results.feedback3}}</li>
+			<li>填写的成绩信息越真实测试结果就越准确哦～</li>
+		</ul>
+	</div>
+</ion-content>

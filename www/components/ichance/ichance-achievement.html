@@ -1,0 +1,44 @@
+<div class="bar bar-header bar-positive">
+  <a class="button button-icon icon ion-ios7-arrow-left" ng-click = "historyBack()">返回</a>
+  <h1 class="title">成绩信息</h1>
+  <a class="button button-icon icon ion-person" ng-click = "checkUserStatus()"></a>
+</div>
+
+  <form name="ichancefinal"> 
+  <ion-content>
+	<div class="list list-inset">
+		<label class="item item-input item-select">
+			<span class="input-label">年级排名</span>
+			<select ng-model="user.classRank" name="class_rank">
+		      <option value="">请选择当前年级</option>
+		      <option ng-repeat="rank in rankMapping" value="{{rank.key}}" ng-selected="user.classRank == rank.key">{{rank.label}}</option>
+		    </select>
+		</label>
+		<label class="item item-input">
+			<span class="input-label">GPA</span>
+			<input ng-model="user.education.gpa" type="text"  placeholder="请填写0-4之间的数字，可以取一位小数如3.4" name="gpa">
+		</label>
+		<label class="item item-input">
+			<span class="input-label">托福</span>
+			<input ng-model="user.education.toefl" type="tel"  placeholder="请填写0-120之间的整数" name="toefl">
+		</label>
+		<label class="item item-input">
+			<span class="input-label">雅思</span>
+			<input ng-model="user.education.ielts" type="text"  placeholder="请填写0-9之间的数字，可以取整数分或者半分(如6.5)" name="ielts">
+		</label>
+		<label class="item item-input">
+			<span class="input-label">SAT</span>
+			<input ng-model="user.education.sat" type="tel"  placeholder="请填写600-2400之间的整数" name="sat">
+		</label>
+		<label class="item item-input">
+			<span class="input-label">ACT</span>
+			<input ng-model="user.education.act" type="text"  placeholder="请填写0-9之间的数字，可以取整数分或者半分(如6.5)" name="act">
+		</label>
+	</div>
+	<div class="padding">
+		<button class="button button-block button-energized no-bottom-margin" ng-click="submit();" >
+		  查看结果
+		</button>
+	</div>
+	</ion-content>
+  </form>
