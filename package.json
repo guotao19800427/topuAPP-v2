@@ -2,6 +2,9 @@
   "name": "topuapp",
   "version": "1.0.0",
   "description": "topuApp: An Ionic project",
+  "scripts": {
+    "test": "vows --spec"
+  },
   "dependencies": {
     "gulp": "^3.5.6",
     "gulp-sass": "^0.7.1",
