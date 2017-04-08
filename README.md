@@ -7,3 +7,4 @@ bower install
 
 ionic serve
 
+myfirst Angular(with Ionic) project, it's also a mobile web app project.
